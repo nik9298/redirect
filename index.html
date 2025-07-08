@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <!-- fallback редирект без JS -->
-    <meta http-equiv="refresh" content="2;url=https://sgben.com/link?z=9545602&var=native&ymid=clicktest" />
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const varId = params.get("var") || "native";
-      const ymid = params.get("ymid") || "clicktest";
-      const target = `https://sgben.com/link?z=9545602&var=${varId}&ymid=${ymid}`;
-      window.location.replace(target);
-    </script>
-  </head>
-  <body>
-    <p>Redirecting... <a href="https://sgben.com/link?z=9545602&var=native&ymid=clicktest">Click here if not redirected</a></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const varId = params.get("var") || "native";
+    const ymid = Math.random().toString(36).substring(2, 10);
+    const target = `https://sgben.com/link?z=9545602&var=${varId}&ymid=${ymid}`;
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <p>Redirecting... If not redirected, <a href="#">click here</a></p>
+</body>
 </html>
