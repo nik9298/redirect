@@ -5,9 +5,12 @@
   <title>Redirecting...</title>
   <script>
     const params = new URLSearchParams(window.location.search);
-    const varId = params.get("var") || "native";
-    const ymid = Math.random().toString(36).substring(2, 10);
-    const target = `https://sgben.com/link?z=9545602&var=${varId}&ymid=${ymid}`;
+    const varId = params.get("var") || "facebook";
+
+    // Генерация уникального sub-id (16 символов)
+    const subid = Date.now().toString(36) + Math.random().toString(36).substring(2, 8);
+
+    const target = `https://cdn.qwzly.com/casual-sl/1140/ru.html?s=${subid}&z=9545602&var=${varId}&campaignid=9622775&b=24010040&ymid=${subid}&svar=${subid}&ssk=64f2e730b47d6fbef04096b8ba485788`;
     window.location.replace(target);
   </script>
 </head>
