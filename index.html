@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const varId = params.get("var") || "facebook";
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <meta name="referrer" content="no-referrer">
+    <script>
+        function generateRandomID(length) {
+            const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
 
-    // Генерация уникального sub-id (16 символов)
-    const subid = Date.now().toString(36) + Math.random().toString(36).substring(2, 8);
+        const ymid = generateRandomID(16);
+        const click_id = generateRandomID(12);
+        const finalUrl = `https://dating-link.online/ImFrbQB2?var=trafficjunky&ymid=${ymid}&click_id=${click_id}&sub_id_1={{CampaignID}}&sub_id_2={{AdID}}&sub_id_3={{SpotID}}&sub_id_4={{SiteName}}`;
 
-    const target = `https://cdn.qwzly.com/casual-sl/1140/ru.html?s=${subid}&z=9545602&var=${varId}&campaignid=9622775&b=24010040&ymid=${subid}&svar=${subid}&ssk=64f2e730b47d6fbef04096b8ba485788`;
-    window.location.replace(target);
-  </script>
+        window.location.replace(finalUrl);
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=https://dating-link.online/ImFrbQB2?var=trafficjunky">
+    </noscript>
 </head>
 <body>
-  <p>Redirecting... If not redirected, <a href="#">click here</a></p>
+    <p>Redirecting...</p>
 </body>
 </html>
