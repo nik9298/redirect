@@ -4,21 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="referrer" content="no-referrer">
-  <title>Найди свою пару</title>
+  <title>Find Your Match</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      text-align: center;
-      padding: 50px;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    .box {
-      background: white;
+    .container {
+      background: #fff;
       padding: 30px;
       border-radius: 10px;
       max-width: 400px;
-      margin: auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .girl {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
     }
     button {
       background: #ff3366;
@@ -33,10 +47,11 @@
   </style>
 </head>
 <body>
-  <div class="box">
-    <h2>Ты ещё не зарегистрирован?</h2>
-    <p>Узнай, кто хочет с тобой познакомиться рядом 👇</p>
-    <button onclick="go()">Начать</button>
+  <div class="container">
+    <img class="girl" src="https://i.imgur.com/S4gF9Ky.jpg" alt="Woman">
+    <h2>Find Local Singles</h2>
+    <p>Thousands of people are waiting for someone like you. Are you ready to meet your match?</p>
+    <button onclick="go()">Start Now</button>
   </div>
 
   <script>
